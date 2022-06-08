@@ -1,0 +1,688 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+    /* font-family: "Baloo Da 2", cursive; */
+    list-style: none;
+}
+
+html {
+    /* font-size: 62.5; */
+    scroll-behavior: smooth;
+}
+
+
+/* start with navbar*/
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    background-color: black;
+    width: 100%;
+    height: 7rem;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    animation: animateNavbar 1s 0.5s forwards;
+}
+
+@keyframes animateNavbar {
+    0% {
+        top: -8rem;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.navbar .logo {
+    font-weight: bolder;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: x-large;
+    letter-spacing: 1px;
+    position: fixed;
+}
+
+.navbar .logo .diffrent-color {
+    color: #e00707;
+    font-size: xx-large;
+}
+
+.navbar .navbar-icon {
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 1rem;
+    right: 1rem;
+}
+
+.navbar .navbar-icon .line-1 {
+    width: 50%;
+    height: 0.2rem;
+    background-color: whitesmoke;
+    transition: transform .3s;
+}
+
+.navbar .navbar-icon .line-2 {
+    width: 100%;
+    height: 0.2rem;
+    background-color: whitesmoke
+}
+
+.navbar .navbar-icon .line-3 {
+    width: 50%;
+    height: 0.2rem;
+    background-color: whitesmoke;
+    /* margin-left: 0.9rem; */
+    margin-left: auto;
+    transition: transform .3s;
+}
+
+.change .line-1 {
+    transform: translate(100%, 1rem) rotate(-35deg);
+    transform-origin: right;
+}
+
+.change .line-3 {
+    transform: translateY(-1rem) rotate(35deg);
+    transform-origin: right;
+}
+
+
+/* section 2 */
+
+.section-two {
+    position: relative;
+    z-index: 0;
+    background-image: url("../images/dark-bg.jpeg");
+    justify-content: center;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    width: 100%;
+    height: 120vh;
+}
+
+.section-two h2 {
+    font-size: 5rem;
+    color: white;
+    position: absolute;
+    transform: scale(0);
+    top: 15rem;
+    letter-spacing: 1rem;
+    justify-content: center;
+}
+
+.section-two h2.change {
+    transform: scale(1);
+    transition: transform 0.3s 0.3s;
+}
+
+.section-two .slogan {
+    position: absolute;
+    top: 28rem;
+    color: white;
+    opacity: .7;
+    width: 26rem;
+    height: 4rem;
+    font-size: x-large;
+    font-family: system-ui;
+    background-color: black;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-two .slogan h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.section-two button {
+    position: absolute;
+    top: 36rem;
+    height: 2.7rem;
+    text-align: center;
+    font-size: medium;
+    background-color: darkred;
+    width: 15rem;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    animation: fadeAnimation 1s 2s forwards;
+}
+
+
+/* .section-two button::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transform: skewX(-30deg);
+    transition: left 0.5s;
+}
+
+.section-two button:hover::before {
+    left: 100%;
+} */
+
+
+/* start overlay */
+
+.overlay {
+    width: 100%;
+    TEXT-ALIGN: center;
+    background-color: black;
+    color: white;
+    font-size: xx-large;
+    letter-spacing: .1rem;
+    padding-top: 10rem;
+    visibility: hidden;
+    opacity: .9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay.change {
+    visibility: visible;
+    transform-origin: top;
+}
+
+.overlay span {
+    padding: .8rem;
+    display: block;
+}
+
+.overlay span:hover {
+    color: #e00707;
+}
+
+
+/* section three */
+
+.section-three {
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.section-three .about-video {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.section-three video {
+    width: 30rem;
+    height: 20rem;
+    padding: 0 1rem 1rem 0;
+}
+
+.section-three h1 {
+    color: white;
+    letter-spacing: .2rem;
+    font-size: xxx-large;
+    text-transform: capitalize;
+    font-family: -webkit-pictograph;
+    font-weight: lighter;
+}
+
+.section-three h1::after {
+    content: '';
+    width: 4.5rem;
+    height: 0.16rem;
+    background-color: gray;
+    display: inline-block;
+    margin: 1rem;
+}
+
+
+/*  */
+
+.section-three .video-outline {
+    width: 33rem;
+    height: 12rem;
+    align-self: flex-end;
+    color: #dad5d5;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    justify-content: center;
+}
+
+.section-three .video-outline i {
+    font-size: 2rem;
+}
+
+.section-three .video-outline i .left {
+    font-size: 2rem;
+    align-self: flex-end;
+}
+
+.section-three .video-outline :nth-child(4) {
+    align-self: flex-end;
+    margin-right: 1rem;
+}
+
+.section-three span {
+    width: 32rem;
+    height: 0.12rem;
+    background-color: gray;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 3px
+}
+
+.section-three span .up {
+    margin-bottom: 7px;
+}
+
+
+/* section four */
+
+.section-four {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: currentColor;
+    padding: 1rem;
+}
+
+.section-four .pricing {
+    color: white;
+    font-size: xxx-large;
+    text-transform: capitalize;
+    font-family: -webkit-pictograph;
+    color: white;
+}
+
+.section-four .pricing span {
+    width: 6rem;
+    height: 0.15rem;
+    background-color: gray;
+    display: inline-block;
+    vertical-align: super;
+}
+
+.section-four .horizontal-cards {
+    height: 100vh;
+    display: block;
+    width: 60%;
+    height: 90vh;
+    overflow-x: scroll;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+
+/* this for chrome safari opera and firefox */
+
+.section-four .horizontal-cards::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* for ms */
+
+.horizontal-cards {
+    -ms-overflow-style: none;
+}
+
+.section-four .horizontal-cards .card-container {
+    display: block;
+    white-space: nowrap;
+}
+
+.section-four .horizontal-cards .card {
+    display: inline-block;
+    margin-right: 10px;
+    width: 18rem;
+    height: 32rem;
+    background-color: #1c1c1c;
+    color: white;
+    justify-content: flex-start;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    font-family: sans-serif;
+    /* transform: translate3d(0px, 0px, -147.326px) rotateX(0deg) rotateY(-103.128deg) scale(1); */
+}
+
+.card .item-price {
+    background-color: #13cde4;
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    padding-left: 5px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card .item-price h3 {
+    font-weight: lighter;
+    font-size: x-large;
+    font-family: cursive;
+    text-transform: uppercase;
+}
+
+.card h1 {
+    padding: 1rem;
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.card .items-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.rem;
+    letter-spacing: 2px;
+    color: #13cde4
+}
+
+.card .items-container .item {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.card .items-container i {
+    padding-right: 0.5rem;
+}
+
+.card button {
+    width: 10rem;
+    height: 2.5rem;
+    border: none;
+    align-self: center;
+    background-color: #13cde4;
+    color: white;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+
+
+/* second card */
+
+.section-four div.second {
+    color: rgb(187, 187, 3);
+}
+
+.section-four button.second {
+    background-color: rgb(187, 187, 3);
+}
+
+.card .second-price {
+    background-color: rgb(187, 187, 3);
+}
+
+
+/*  */
+
+
+/* third card */
+
+
+/* second card */
+
+.section-four div.third {
+    color: #e61c1c;
+}
+
+.section-four button.third {
+    background-color: #e61c1c;
+}
+
+.card .third-price {
+    background-color: #e61c1c;
+}
+
+
+/*  */
+
+
+/* fourth-card */
+
+.section-four div.fourth {
+    color: #378837;
+}
+
+.section-four button.fourth {
+    background-color: #378837;
+}
+
+.card .fourth-price {
+    background-color: #378837;
+}
+
+
+/* section-five */
+
+.section-five {
+    background-color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 5rem;
+}
+
+.section-five .contact {
+    color: white;
+    font-family: -webkit-pictograph;
+}
+
+.section-five .contact span {
+    width: 6rem;
+    height: 0.15rem;
+    background-color: gray;
+    display: inline-block;
+    vertical-align: super;
+}
+
+.section-five .parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-five .parent-container h1 {
+    color: white;
+    letter-spacing: .1rem
+}
+
+.section-five .contact-container {
+    display: flex;
+    text-align: center;
+    align-self: baseline;
+    flex-direction: row;
+    padding-top: 5rem;
+}
+
+.section-five .contact-container .phone,
+.address,
+.email {
+    width: 10rem;
+    height: 15rem;
+    padding-top: 1rem;
+    color: white;
+}
+
+.section-five .contact-container i {
+    color: darkred;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-five .contact-container h1 {
+    font-size: x-large;
+}
+
+.section-five .contact-container p {
+    color: gray;
+    margin: -.2rem;
+}
+
+.section-five .input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-five .input-container input {
+    width: 25rem;
+    height: 2rem;
+    border: none;
+    background-color: dimgray;
+    border-radius: 1px;
+    margin-bottom: 1rem;
+}
+
+.section-five .input-container input:focus {
+    outline: none;
+}
+
+.section-five .input-container input.message {
+    height: 3rem;
+}
+
+.section-five .input-container button {
+    width: 25rem;
+    height: 2rem;
+    border: none;
+    background-color: darkred;
+    border-radius: 1px;
+    color: white;
+}
+
+
+/*section-six  */
+
+.section-six {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #2e2c2c;
+    color: white;
+}
+
+.section-six .quickLines-conatiner {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-six .quickLines-conatiner h4 {
+    padding: 1rem;
+}
+
+.section-six .quickLines-conatiner h4:hover {
+    opacity: .6;
+}
+
+.section-six p {
+    font-size: medium;
+    color: gray;
+    margin-right: 1rem;
+}
+
+
+/* start responsive */
+
+
+/* @media(max-width: 1400px) {
+    .section-three .video-outline {
+        padding-right: 10rem;
+    }
+} */
+
+
+/*  */
+
+@media(max-width: 1200px) {
+    .section-three .video-outline {
+        padding-right: 3rem;
+    }
+}
+
+@media(max-width: 1000px) {
+    .section-three .video-outline {
+        padding-right: 0rem;
+    }
+}
+
+@media(max-width:750px) {
+    .section-two h2 {
+        font-size: 3rem;
+    }
+    .section-three {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
+        align-items: center;
+    }
+    .section-three video {
+        width: 25rem;
+        height: 15rem;
+        /* padding: 0 1rem 1rem 0; */
+        align-self: center;
+    }
+    .section-three .video-outline {
+        width: 90%;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+    .section-five {
+        flex-direction: column;
+        padding-top: 5rem;
+    }
+    .section-six {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+    }
+}
+
+@media(max-width:550px) {
+    .section-two h2 {
+        font-size: 2rem;
+    }
+    .section-three .video-outline {
+        width: 80%;
+        font-size: .5rem;
+        align-self: center;
+        /* padding-bottom: 1rem; */
+    }
+    .section-three span {
+        width: 21rem;
+        height: 0.12rem;
+        background-color: gray;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-top: 3px;
+    }
+    .section-five .contact-container {
+        flex-direction: column;
+        margin: auto;
+    }
+}
